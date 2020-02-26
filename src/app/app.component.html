@@ -2,11 +2,11 @@
     <div class="">
       <h3>Team Members List</h3>
       <table>
-      <tr *ngFor="let team of teams; let i = index">
-        <td>{{ i + 1 }} </td>
-          <td style="min-width: 160px;">{{ team }}</td>
-          <td><span (click)="removeItem(i)" class="btn">Delete</span></td>
-          <td><span (click)="editItem(i)" class="btn">Edit</span></td>
+        <tr *ngFor="let team of teams; let i = index">
+            <td>{{ i + 1 }} </td>
+            <td style="min-width: 160px;">{{ team }}</td>
+            <td><span (click)="removeItem(i)" class="btn">Delete</span></td>
+            <td><span (click)="editItem(i)" class="btn">Edit</span></td>
         </tr>
       </table>
       <div style="margin-top: 10px">

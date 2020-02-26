@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title: string = 'This is a simple app.';
   editDiv:boolean  = false;
   editMember: any;
   id: any;
@@ -24,7 +25,6 @@ export class AppComponent {
     this.editMember = this.teams[id];
     this.id = id;
   }
-
   updateItem = function (id:any, editMember:any) {
     this.teams[id] = editMember;
     this.editDiv =! this.editDiv;
