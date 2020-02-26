@@ -1,0 +1,23 @@
+<div class="flexdiv">
+    <div class="">
+      <h3>Team Members List</h3>
+      <table>
+      <tr *ngFor="let team of teams; let i = index">
+        <td>{{ i + 1 }} </td>
+          <td style="min-width: 160px;">{{ team }}</td>
+          <td><span (click)="removeItem(i)" class="btn">Delete</span></td>
+          <td><span (click)="editItem(i)" class="btn">Edit</span></td>
+        </tr>
+      </table>
+      <div style="margin-top: 10px">
+        <input type="text" placeholder="Name" #newmember>
+        <button type="submit" (click)="addItem(newmember)">Add New Name</button>
+      </div>
+    </div> <!-- End -->
+    <div style="margin-left: 10px;" *ngIf=editDiv>
+      <h3>Update</h3>
+      <input type="hidden" [(ngModel)]="id">
+      <input type="text" placeholder="update Name" [(ngModel)]="editMember">
+      <button type="submit" (click)="updateItem(id, editMember)">Update</button>
+    </div> <!-- End -->
+</div> <!-- End -->
